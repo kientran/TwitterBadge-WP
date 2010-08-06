@@ -1,0 +1,3 @@
+[submodule "lib/TwitterBadge-PHP"]
+	path = lib/TwitterBadge-PHP
+	url = git://github.com/kientran/TwitterBadge-PHP.git
