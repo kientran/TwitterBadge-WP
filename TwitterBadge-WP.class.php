@@ -44,7 +44,8 @@
                                         $options['oauth_token_secret'] ); 
 
         $content = $connection->get( 'statuses/user_timeline',
-                                      array('count' => $options['number_tweets']));
+                                      array('count' => $options['number_tweets'],
+                                            'include_rts' => true));
 
         set_transient('TwitterFeed', $content, $options['cache_timeout']);
         $tweets = $content;
@@ -99,7 +100,6 @@
                 <tr valign="top"><th scope="row">Number of Tweets to Show</th>
                     <td><input type="text" name="TwitterBadge[number_tweets]" value="<?php echo $options['number_tweets']; ?>" /></td>
                 </tr>
-
 </table>
 <h3>Twitter Single User API Keys</h3>
 
